@@ -13,7 +13,7 @@ const app = (totalVehicles, timerId) => {
 			clearInterval(timerId);
 		}
 	};
-	const buildCars = setInterval(addVehicleToQueue, utils.randomInterval, totalVehicles);
+	const buildCars = setInterval(addVehicleToQueue, utils.randomCarCreationInterval, totalVehicles);
 };
 
 const timer = setInterval(utils.tick, 1000);

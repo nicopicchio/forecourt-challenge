@@ -22,7 +22,9 @@ export const generateRandomNumber = (minValue, maxValue, decimalPlace) => {
 	return Number(generatedNumber.toFixed(decimalPlace));
 };
 
-export const randomInterval = generateRandomNumber(1500, 2200, 0);
+export const randomCarCreationInterval = generateRandomNumber(1500, 2200, 0);
+
+export const randomDriverAgitationInterval = generateRandomNumber(1000, 2000, 0);
 
 export const tick = () => {
 	globalVariables.currentSecond++;
