@@ -32,12 +32,13 @@ export const tick = () => {
 		if (pump.isPumpFree() && globalVariables.queue.length > 0) {
 			const refuellingVehicle = globalVariables.queue.shift();
 			pump.startRefuel(refuellingVehicle, globalVariables.currentSecond);
+			console.log('CURRENTLY REFUELLING: ', refuellingVehicle)
 		} else if (!pump.isPumpFree()) {
 			const secondsElapsed = globalVariables.currentSecond - pump.occupiedAt;
 			if (secondsElapsed >= pump.secondsToRefill) {
 				const receiptTransaction = pump.endRefuel();
+				console.log('RECEIPT: ', receiptTransaction)
 				updateRunningTotals(receiptTransaction);
-				console.log(globalVariables.runningTotals);
 			}
 		}
 	});

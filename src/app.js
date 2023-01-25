@@ -11,6 +11,7 @@ const app = (totalVehicles, timerId) => {
 		if (globalVariables.vehicleCount >= totalVehicles) {
 			clearInterval(buildCars);
 			clearInterval(timerId);
+			console.log('RUNNING TOTALS: ', globalVariables.runningTotals);
 		}
 	};
 	const buildCars = setInterval(addVehicleToQueue, utils.randomCarCreationInterval, totalVehicles);
@@ -18,4 +19,4 @@ const app = (totalVehicles, timerId) => {
 
 const timer = setInterval(utils.tick, 1000);
 
-app(50, timer);
+app(10, timer);
