@@ -20,8 +20,9 @@ export default class Vehicle {
 		let fuelLevel, fuelType;
 		switch (type) {
 			case 'HGV':
+				const findDiesel = fuels.find(fuel => fuel === 'Diesel')
 				fuelLevel = generateRandomNumber(0, HGVTankCapacity * 0.25, 1);
-				return new Vehicle('HGV', HGVTankCapacity, fuelLevel, 'Diesel');
+				return new Vehicle('HGV', HGVTankCapacity, fuelLevel, findDiesel);
 			case 'Van':
 				fuelType = generateRandomArrayIndex(fuels.slice(0, 2));
 				fuelLevel = generateRandomNumber(0, vanTankCapacity * 0.25, 1);
