@@ -1,4 +1,4 @@
-import Transaction from './Transaction.js';
+import Transaction from '../src/Transaction.js';
 
 export default class Pump {
   constructor(pumpNumber) {

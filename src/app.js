@@ -1,6 +1,6 @@
-import * as appFunction from './functions.js';
-import * as utils from './utils.js';
-import { globalVariables } from './globalVariables.js';
+import * as appFunction from '../src/functions.js';
+import * as utils from '../utils.js';
+import { globalVariables } from '../src/globalVariables.js';
 
 const app = (totalVehicles, timerId) => {
 	const addVehicleToQueue = (totalVehicles) => {
