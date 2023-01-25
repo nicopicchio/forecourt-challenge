@@ -1,4 +1,4 @@
-export const populateTypes = (array) => {
+export const generateRandomArrayIndex = (array) => {
 	return array[Math.floor(Math.random() * array.length)];
 };
 

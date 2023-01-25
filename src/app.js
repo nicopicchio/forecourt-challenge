@@ -1,11 +1,12 @@
 import * as appFunction from '../src/functions.js';
-import * as utils from '../utils.js';
+import * as utils from './utils.js';
+import Vehicle from './Vehicle.js';
 import { globalVariables } from '../src/globalVariables.js';
 
 const app = (totalVehicles, timerId) => {
 	const addVehicleToQueue = (totalVehicles) => {
 		if (globalVariables.queue.length < 5) {
-			globalVariables.queue.push(appFunction.generateRandomVehicle(globalVariables.vehicle));
+			globalVariables.queue.push(Vehicle.generateRandomVehicle());
 			globalVariables.vehicleCount++;
 		}
 		if (globalVariables.vehicleCount >= totalVehicles) {
@@ -18,4 +19,4 @@ const app = (totalVehicles, timerId) => {
 
 const timer = setInterval(appFunction.tick, 1000);
 
-app(10, timer);
+app(50, timer);
