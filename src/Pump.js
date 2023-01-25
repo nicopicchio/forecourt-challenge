@@ -20,7 +20,7 @@ export default class Pump {
     this.currentTransactionFuel = vehicle.fuelType;
     
     const fuelNeeded = Math.floor(vehicle.tankCapacity - vehicle.fuelGauge);
-    const secondsToFull = Math.ceil(fuelNeeded / 1.5);
+    const secondsToFull = Math.ceil(fuelNeeded / this.pumpSpeed);
 
     this.occupiedAt = currentSecond;
     this.secondsToRefill = secondsToFull;
