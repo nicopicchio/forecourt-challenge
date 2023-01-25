@@ -1,4 +1,3 @@
-import * as appFunction from '../src/functions.js';
 import * as utils from './utils.js';
 import Vehicle from './Vehicle.js';
 import { globalVariables } from '../src/globalVariables.js';
@@ -17,6 +16,6 @@ const app = (totalVehicles, timerId) => {
 	const buildCars = setInterval(addVehicleToQueue, utils.randomInterval, totalVehicles);
 };
 
-const timer = setInterval(appFunction.tick, 1000);
+const timer = setInterval(utils.tick, 1000);
 
 app(50, timer);
